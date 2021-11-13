@@ -23,16 +23,16 @@ Partial Class Management
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ListViewItem41 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product ID"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem42 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Name"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem43 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Brand"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem44 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Category"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem45 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Quanity"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem46 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Description"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem47 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Manufacturer"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem48 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Stock"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem49 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Supplier"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem50 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Date Shipped"}, -1, System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(130, Byte), Integer)), New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product ID"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Name"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Brand"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Category"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Quanity"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem6 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Description"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem7 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Manufacturer"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem8 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Stock"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem9 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Supplier"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
+        Dim ListViewItem10 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Date Shipped"}, -1, System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(130, Byte), Integer)), New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -51,6 +51,7 @@ Partial Class Management
         Me.chpdmnuft = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chstck = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.chspp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.chdtshp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btnupdate = New System.Windows.Forms.Button()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -74,7 +75,6 @@ Partial Class Management
         Me.lbserver = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.chdtshp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -200,7 +200,7 @@ Partial Class Management
         Me.ListView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(130, Byte), Integer))
         Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chpdtid, Me.chpdtnme, Me.chpdtbrnd, Me.chpdtctgry, Me.chpdtqty, Me.chpdtdcrpt, Me.chpdmnuft, Me.chstck, Me.chspp, Me.chdtshp})
         Me.ListView1.HideSelection = False
-        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem41, ListViewItem42, ListViewItem43, ListViewItem44, ListViewItem45, ListViewItem46, ListViewItem47, ListViewItem48, ListViewItem49, ListViewItem50})
+        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5, ListViewItem6, ListViewItem7, ListViewItem8, ListViewItem9, ListViewItem10})
         Me.ListView1.Location = New System.Drawing.Point(392, 68)
         Me.ListView1.Name = "ListView1"
         Me.ListView1.Size = New System.Drawing.Size(749, 416)
@@ -260,6 +260,12 @@ Partial Class Management
         Me.chspp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.chspp.Width = 500
         '
+        'chdtshp
+        '
+        Me.chdtshp.Text = "Date Shipped"
+        Me.chdtshp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.chdtshp.Width = 500
+        '
         'btnsave
         '
         Me.btnsave.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
@@ -304,7 +310,6 @@ Partial Class Management
         Me.txtdtship.Size = New System.Drawing.Size(192, 28)
         Me.txtdtship.TabIndex = 26
         Me.txtdtship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtdtship.UseSystemPasswordChar = True
         '
         'Label5
         '
@@ -326,7 +331,6 @@ Partial Class Management
         Me.txtsupplier.Size = New System.Drawing.Size(192, 28)
         Me.txtsupplier.TabIndex = 22
         Me.txtsupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtsupplier.UseSystemPasswordChar = True
         '
         'Label6
         '
@@ -390,7 +394,6 @@ Partial Class Management
         Me.txtpdtdcpt.Size = New System.Drawing.Size(192, 28)
         Me.txtpdtdcpt.TabIndex = 16
         Me.txtpdtdcpt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtpdtdcpt.UseSystemPasswordChar = True
         '
         'Label3
         '
@@ -454,7 +457,6 @@ Partial Class Management
         Me.txtpdtbrnd.Size = New System.Drawing.Size(192, 28)
         Me.txtpdtbrnd.TabIndex = 10
         Me.txtpdtbrnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.txtpdtbrnd.UseSystemPasswordChar = True
         '
         'lbusername
         '
@@ -501,12 +503,6 @@ Partial Class Management
         'Timer1
         '
         Me.Timer1.Interval = 80
-        '
-        'chdtshp
-        '
-        Me.chdtshp.Text = "Date Shipped"
-        Me.chdtshp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chdtshp.Width = 500
         '
         'Management
         '
