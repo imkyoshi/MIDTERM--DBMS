@@ -25,19 +25,18 @@
             objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
             objdr = objcmd.ExecuteReader
             While (objdr.Read)
-                With ListView1.Items.Add(objdr("Product ID"))
-                    .subitems.add(objdr("Product Name"))
-                    .subitems.add(objdr("Product Brand"))
-                    .subitems.add(objdr("Product Category"))
-                    .subitems.add(objdr("Product Quantity"))
-                    .subitems.add(objdr("Product Description"))
-                    .subitems.add(objdr("Product Manufacturer"))
+                With ListView1.Items.Add(objdr("ProductID"))
+                    .subitems.add(objdr("ProductName"))
+                    .subitems.add(objdr("ProductBrand"))
+                    .subitems.add(objdr("ProductCategory"))
+                    .subitems.add(objdr("ProductQuantity"))
+                    .subitems.add(objdr("ProductDescription"))
+                    .subitems.add(objdr("ProductManufacturer"))
                     .subitems.add(objdr("Stock"))
                     .subitems.add(objdr("Supplier"))
                     .subitems.add(objdr("Date Shipped"))
                 End With
             End While
-
             objcmd.Dispose()
             objdr.Close()
         Catch ex As Exception
@@ -47,7 +46,7 @@
     End Sub
 
     Private Sub Btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
-        strsql = "INSERT tbl_pcperipherals set Product Name=@field2, Product Brand=@field3, Product Category=@field4, Product Quantity=@field5, Product Description=@field6, Product Manufacturer=@field7, 
+        strsql = "INSERT tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, ProductDescription=@field6, ProductManufacturer=@field7, 
         Stock=@field8,Supplier=@field9, Date Shipped=@field10,"
         With objcmd
             .Parameters.AddWithValue("@field1", txtpdtid.Text)
@@ -68,7 +67,7 @@
     End Sub
 
     Private Sub Btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
-        strsql = "UPDATE tbl_pcperipherals set Product Name=@field2, Product Brand=@field3, Product Category=@field4, Product Quantity=@field5, Product Description=@field6, Product Manufacturer=@field7, 
+        strsql = "UPDATE tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, ProductDescription=@field6, ProductManufacturer=@field7, 
         Stock=@field8,Supplier=@field9, Date Shipped=@field10,"
         With objcmd
             .Parameters.AddWithValue("@field1", txtpdtid.Text)
