@@ -54,27 +54,28 @@ Partial Class Management
         Me.chdtshp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btnupdate = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
+        Me.dateshipped = New System.Windows.Forms.Label()
         Me.txtdtship = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lbproductsupplier = New System.Windows.Forms.Label()
         Me.txtsupplier = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.lbproductstock = New System.Windows.Forms.Label()
         Me.txtstock = New System.Windows.Forms.TextBox()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lbproductmanufacturer = New System.Windows.Forms.Label()
         Me.txtpdtmanu = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lbproductdescription = New System.Windows.Forms.Label()
         Me.txtpdtdcpt = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lbproductquantity = New System.Windows.Forms.Label()
         Me.txtpdtqnty = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.lbproductcategory = New System.Windows.Forms.Label()
         Me.txtpdtctgry = New System.Windows.Forms.TextBox()
-        Me.lbpassword = New System.Windows.Forms.Label()
+        Me.lbproductbrand = New System.Windows.Forms.Label()
         Me.txtpdtbrnd = New System.Windows.Forms.TextBox()
-        Me.lbusername = New System.Windows.Forms.Label()
+        Me.lbproductname = New System.Windows.Forms.Label()
         Me.txtpdtnme = New System.Windows.Forms.TextBox()
-        Me.lbserver = New System.Windows.Forms.Label()
+        Me.lbproductid = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -128,31 +129,32 @@ Partial Class Management
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.DateTimePicker1)
         Me.Panel2.Controls.Add(Me.TextBox8)
         Me.Panel2.Controls.Add(Me.btnadd)
         Me.Panel2.Controls.Add(Me.btndelete)
         Me.Panel2.Controls.Add(Me.ListView1)
         Me.Panel2.Controls.Add(Me.btnsave)
         Me.Panel2.Controls.Add(Me.btnupdate)
-        Me.Panel2.Controls.Add(Me.Label8)
+        Me.Panel2.Controls.Add(Me.dateshipped)
         Me.Panel2.Controls.Add(Me.txtdtship)
-        Me.Panel2.Controls.Add(Me.Label5)
+        Me.Panel2.Controls.Add(Me.lbproductsupplier)
         Me.Panel2.Controls.Add(Me.txtsupplier)
-        Me.Panel2.Controls.Add(Me.Label6)
+        Me.Panel2.Controls.Add(Me.lbproductstock)
         Me.Panel2.Controls.Add(Me.txtstock)
-        Me.Panel2.Controls.Add(Me.Label7)
+        Me.Panel2.Controls.Add(Me.lbproductmanufacturer)
         Me.Panel2.Controls.Add(Me.txtpdtmanu)
-        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.lbproductdescription)
         Me.Panel2.Controls.Add(Me.txtpdtdcpt)
-        Me.Panel2.Controls.Add(Me.Label3)
+        Me.Panel2.Controls.Add(Me.lbproductquantity)
         Me.Panel2.Controls.Add(Me.txtpdtqnty)
-        Me.Panel2.Controls.Add(Me.Label4)
+        Me.Panel2.Controls.Add(Me.lbproductcategory)
         Me.Panel2.Controls.Add(Me.txtpdtctgry)
-        Me.Panel2.Controls.Add(Me.lbpassword)
+        Me.Panel2.Controls.Add(Me.lbproductbrand)
         Me.Panel2.Controls.Add(Me.txtpdtbrnd)
-        Me.Panel2.Controls.Add(Me.lbusername)
+        Me.Panel2.Controls.Add(Me.lbproductname)
         Me.Panel2.Controls.Add(Me.txtpdtnme)
-        Me.Panel2.Controls.Add(Me.lbserver)
+        Me.Panel2.Controls.Add(Me.lbproductid)
         Me.Panel2.Controls.Add(Me.txtpdtid)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Location = New System.Drawing.Point(0, 48)
@@ -209,42 +211,42 @@ Partial Class Management
         '
         'chpdtid
         '
-        Me.chpdtid.Text = "Product ID"
+        Me.chpdtid.Text = "ProductID"
         Me.chpdtid.Width = 900
         '
         'chpdtnme
         '
-        Me.chpdtnme.Text = "Product Name"
+        Me.chpdtnme.Text = "ProductName"
         Me.chpdtnme.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.chpdtnme.Width = 500
         '
         'chpdtbrnd
         '
-        Me.chpdtbrnd.Text = "Product Brand"
+        Me.chpdtbrnd.Text = "ProductBrand"
         Me.chpdtbrnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.chpdtbrnd.Width = 500
         '
         'chpdtctgry
         '
-        Me.chpdtctgry.Text = "Product Category"
+        Me.chpdtctgry.Text = "ProductCategory"
         Me.chpdtctgry.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.chpdtctgry.Width = 500
         '
         'chpdtqty
         '
-        Me.chpdtqty.Text = "Product Quantity"
+        Me.chpdtqty.Text = "ProductQuantity"
         Me.chpdtqty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.chpdtqty.Width = 500
         '
         'chpdtdcrpt
         '
-        Me.chpdtdcrpt.Text = "Product Description"
+        Me.chpdtdcrpt.Text = "ProductDescription"
         Me.chpdtdcrpt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.chpdtdcrpt.Width = 500
         '
         'chpdmnuft
         '
-        Me.chpdmnuft.Text = "Product Manufacturer"
+        Me.chpdmnuft.Text = "ProductManufacturer"
         Me.chpdmnuft.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         Me.chpdmnuft.Width = 500
         '
@@ -290,37 +292,37 @@ Partial Class Management
         Me.btnupdate.Text = "Update"
         Me.btnupdate.UseVisualStyleBackColor = False
         '
-        'Label8
+        'dateshipped
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(72, 463)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(104, 18)
-        Me.Label8.TabIndex = 27
-        Me.Label8.Text = "Date Shipped"
+        Me.dateshipped.AutoSize = True
+        Me.dateshipped.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dateshipped.ForeColor = System.Drawing.Color.White
+        Me.dateshipped.Location = New System.Drawing.Point(72, 463)
+        Me.dateshipped.Name = "dateshipped"
+        Me.dateshipped.Size = New System.Drawing.Size(104, 18)
+        Me.dateshipped.TabIndex = 27
+        Me.dateshipped.Text = "Date Shipped"
         '
         'txtdtship
         '
         Me.txtdtship.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtdtship.Location = New System.Drawing.Point(183, 456)
+        Me.txtdtship.Location = New System.Drawing.Point(111, 532)
         Me.txtdtship.Margin = New System.Windows.Forms.Padding(4)
         Me.txtdtship.Name = "txtdtship"
         Me.txtdtship.Size = New System.Drawing.Size(192, 28)
         Me.txtdtship.TabIndex = 26
         Me.txtdtship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label5
+        'lbproductsupplier
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(108, 419)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(68, 18)
-        Me.Label5.TabIndex = 25
-        Me.Label5.Text = "Supplier"
+        Me.lbproductsupplier.AutoSize = True
+        Me.lbproductsupplier.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbproductsupplier.ForeColor = System.Drawing.Color.White
+        Me.lbproductsupplier.Location = New System.Drawing.Point(108, 419)
+        Me.lbproductsupplier.Name = "lbproductsupplier"
+        Me.lbproductsupplier.Size = New System.Drawing.Size(68, 18)
+        Me.lbproductsupplier.TabIndex = 25
+        Me.lbproductsupplier.Text = "Supplier"
         '
         'txtsupplier
         '
@@ -332,16 +334,16 @@ Partial Class Management
         Me.txtsupplier.TabIndex = 22
         Me.txtsupplier.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label6
+        'lbproductstock
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(128, 378)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(48, 18)
-        Me.Label6.TabIndex = 24
-        Me.Label6.Text = "Stock"
+        Me.lbproductstock.AutoSize = True
+        Me.lbproductstock.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbproductstock.ForeColor = System.Drawing.Color.White
+        Me.lbproductstock.Location = New System.Drawing.Point(128, 378)
+        Me.lbproductstock.Name = "lbproductstock"
+        Me.lbproductstock.Size = New System.Drawing.Size(48, 18)
+        Me.lbproductstock.TabIndex = 24
+        Me.lbproductstock.Text = "Stock"
         '
         'txtstock
         '
@@ -353,16 +355,16 @@ Partial Class Management
         Me.txtstock.TabIndex = 21
         Me.txtstock.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label7
+        'lbproductmanufacturer
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(13, 337)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(163, 18)
-        Me.Label7.TabIndex = 23
-        Me.Label7.Text = "Product Manufacturer"
+        Me.lbproductmanufacturer.AutoSize = True
+        Me.lbproductmanufacturer.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbproductmanufacturer.ForeColor = System.Drawing.Color.White
+        Me.lbproductmanufacturer.Location = New System.Drawing.Point(13, 337)
+        Me.lbproductmanufacturer.Name = "lbproductmanufacturer"
+        Me.lbproductmanufacturer.Size = New System.Drawing.Size(163, 18)
+        Me.lbproductmanufacturer.TabIndex = 23
+        Me.lbproductmanufacturer.Text = "Product Manufacturer"
         '
         'txtpdtmanu
         '
@@ -374,16 +376,16 @@ Partial Class Management
         Me.txtpdtmanu.TabIndex = 20
         Me.txtpdtmanu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label2
+        'lbproductdescription
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(26, 295)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(150, 18)
-        Me.Label2.TabIndex = 19
-        Me.Label2.Text = "Product Description"
+        Me.lbproductdescription.AutoSize = True
+        Me.lbproductdescription.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbproductdescription.ForeColor = System.Drawing.Color.White
+        Me.lbproductdescription.Location = New System.Drawing.Point(26, 295)
+        Me.lbproductdescription.Name = "lbproductdescription"
+        Me.lbproductdescription.Size = New System.Drawing.Size(150, 18)
+        Me.lbproductdescription.TabIndex = 19
+        Me.lbproductdescription.Text = "Product Description"
         '
         'txtpdtdcpt
         '
@@ -395,16 +397,16 @@ Partial Class Management
         Me.txtpdtdcpt.TabIndex = 16
         Me.txtpdtdcpt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label3
+        'lbproductquantity
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(49, 250)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(127, 18)
-        Me.Label3.TabIndex = 18
-        Me.Label3.Text = "Product Quantity"
+        Me.lbproductquantity.AutoSize = True
+        Me.lbproductquantity.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbproductquantity.ForeColor = System.Drawing.Color.White
+        Me.lbproductquantity.Location = New System.Drawing.Point(49, 250)
+        Me.lbproductquantity.Name = "lbproductquantity"
+        Me.lbproductquantity.Size = New System.Drawing.Size(127, 18)
+        Me.lbproductquantity.TabIndex = 18
+        Me.lbproductquantity.Text = "Product Quantity"
         '
         'txtpdtqnty
         '
@@ -416,16 +418,16 @@ Partial Class Management
         Me.txtpdtqnty.TabIndex = 15
         Me.txtpdtqnty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label4
+        'lbproductcategory
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(44, 208)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(132, 18)
-        Me.Label4.TabIndex = 17
-        Me.Label4.Text = "Product Category"
+        Me.lbproductcategory.AutoSize = True
+        Me.lbproductcategory.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbproductcategory.ForeColor = System.Drawing.Color.White
+        Me.lbproductcategory.Location = New System.Drawing.Point(44, 208)
+        Me.lbproductcategory.Name = "lbproductcategory"
+        Me.lbproductcategory.Size = New System.Drawing.Size(132, 18)
+        Me.lbproductcategory.TabIndex = 17
+        Me.lbproductcategory.Text = "Product Category"
         '
         'txtpdtctgry
         '
@@ -437,16 +439,16 @@ Partial Class Management
         Me.txtpdtctgry.TabIndex = 14
         Me.txtpdtctgry.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'lbpassword
+        'lbproductbrand
         '
-        Me.lbpassword.AutoSize = True
-        Me.lbpassword.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbpassword.ForeColor = System.Drawing.Color.White
-        Me.lbpassword.Location = New System.Drawing.Point(65, 165)
-        Me.lbpassword.Name = "lbpassword"
-        Me.lbpassword.Size = New System.Drawing.Size(111, 18)
-        Me.lbpassword.TabIndex = 13
-        Me.lbpassword.Text = "Product Brand"
+        Me.lbproductbrand.AutoSize = True
+        Me.lbproductbrand.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbproductbrand.ForeColor = System.Drawing.Color.White
+        Me.lbproductbrand.Location = New System.Drawing.Point(65, 165)
+        Me.lbproductbrand.Name = "lbproductbrand"
+        Me.lbproductbrand.Size = New System.Drawing.Size(111, 18)
+        Me.lbproductbrand.TabIndex = 13
+        Me.lbproductbrand.Text = "Product Brand"
         '
         'txtpdtbrnd
         '
@@ -458,16 +460,16 @@ Partial Class Management
         Me.txtpdtbrnd.TabIndex = 10
         Me.txtpdtbrnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'lbusername
+        'lbproductname
         '
-        Me.lbusername.AutoSize = True
-        Me.lbusername.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbusername.ForeColor = System.Drawing.Color.White
-        Me.lbusername.Location = New System.Drawing.Point(68, 120)
-        Me.lbusername.Name = "lbusername"
-        Me.lbusername.Size = New System.Drawing.Size(108, 18)
-        Me.lbusername.TabIndex = 12
-        Me.lbusername.Text = "Product Name"
+        Me.lbproductname.AutoSize = True
+        Me.lbproductname.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbproductname.ForeColor = System.Drawing.Color.White
+        Me.lbproductname.Location = New System.Drawing.Point(68, 120)
+        Me.lbproductname.Name = "lbproductname"
+        Me.lbproductname.Size = New System.Drawing.Size(108, 18)
+        Me.lbproductname.TabIndex = 12
+        Me.lbproductname.Text = "Product Name"
         '
         'txtpdtnme
         '
@@ -479,16 +481,16 @@ Partial Class Management
         Me.txtpdtnme.TabIndex = 9
         Me.txtpdtnme.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'lbserver
+        'lbproductid
         '
-        Me.lbserver.AutoSize = True
-        Me.lbserver.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbserver.ForeColor = System.Drawing.Color.White
-        Me.lbserver.Location = New System.Drawing.Point(93, 75)
-        Me.lbserver.Name = "lbserver"
-        Me.lbserver.Size = New System.Drawing.Size(83, 18)
-        Me.lbserver.TabIndex = 11
-        Me.lbserver.Text = "Product ID"
+        Me.lbproductid.AutoSize = True
+        Me.lbproductid.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbproductid.ForeColor = System.Drawing.Color.White
+        Me.lbproductid.Location = New System.Drawing.Point(93, 75)
+        Me.lbproductid.Name = "lbproductid"
+        Me.lbproductid.Size = New System.Drawing.Size(83, 18)
+        Me.lbproductid.TabIndex = 11
+        Me.lbproductid.Text = "Product ID"
         '
         'txtpdtid
         '
@@ -503,6 +505,13 @@ Partial Class Management
         'Timer1
         '
         Me.Timer1.Interval = 80
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.Location = New System.Drawing.Point(183, 463)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(192, 25)
+        Me.DateTimePicker1.TabIndex = 34
         '
         'Management
         '
@@ -535,25 +544,25 @@ Partial Class Management
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents Label8 As Label
+    Friend WithEvents dateshipped As Label
     Friend WithEvents txtdtship As TextBox
-    Friend WithEvents Label5 As Label
+    Friend WithEvents lbproductsupplier As Label
     Friend WithEvents txtsupplier As TextBox
-    Friend WithEvents Label6 As Label
+    Friend WithEvents lbproductstock As Label
     Friend WithEvents txtstock As TextBox
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lbproductmanufacturer As Label
     Friend WithEvents txtpdtmanu As TextBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lbproductdescription As Label
     Friend WithEvents txtpdtdcpt As TextBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents lbproductquantity As Label
     Friend WithEvents txtpdtqnty As TextBox
-    Friend WithEvents Label4 As Label
+    Friend WithEvents lbproductcategory As Label
     Friend WithEvents txtpdtctgry As TextBox
-    Friend WithEvents lbpassword As Label
+    Friend WithEvents lbproductbrand As Label
     Friend WithEvents txtpdtbrnd As TextBox
-    Friend WithEvents lbusername As Label
+    Friend WithEvents lbproductname As Label
     Friend WithEvents txtpdtnme As TextBox
-    Friend WithEvents lbserver As Label
+    Friend WithEvents lbproductid As Label
     Friend WithEvents txtpdtid As TextBox
     Friend WithEvents ListView1 As ListView
     Friend WithEvents btnsave As Button
@@ -571,4 +580,5 @@ Partial Class Management
     Friend WithEvents chstck As ColumnHeader
     Friend WithEvents chspp As ColumnHeader
     Friend WithEvents chdtshp As ColumnHeader
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class

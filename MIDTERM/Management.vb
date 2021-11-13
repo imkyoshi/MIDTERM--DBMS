@@ -34,7 +34,7 @@
                     .subitems.add(objdr("ProductManufacturer"))
                     .subitems.add(objdr("Stock"))
                     .subitems.add(objdr("Supplier"))
-                    .subitems.add(objdr("Date Shipped"))
+                    .subitems.add(objdr("DateShipped"))
                 End With
             End While
             objcmd.Dispose()
@@ -47,7 +47,7 @@
 
     Private Sub Btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
         strsql = "INSERT tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, ProductDescription=@field6, ProductManufacturer=@field7, 
-        Stock=@field8,Supplier=@field9, Date Shipped=@field10,"
+        Stock=@field8,Supplier=@field9, DateShipped=@field10,"
         With objcmd
             .Parameters.AddWithValue("@field1", txtpdtid.Text)
             .Parameters.AddWithValue("@field2", txtpdtnme.Text)
