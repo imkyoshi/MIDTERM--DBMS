@@ -75,6 +75,7 @@ Partial Class Management
         Me.lbproductid = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.lbsearch = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -128,6 +129,7 @@ Partial Class Management
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.lbsearch)
         Me.Panel2.Controls.Add(Me.txtdate)
         Me.Panel2.Controls.Add(Me.txtsearch)
         Me.Panel2.Controls.Add(Me.btnsearch)
@@ -175,7 +177,7 @@ Partial Class Management
         'txtsearch
         '
         Me.txtsearch.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtsearch.Location = New System.Drawing.Point(392, 23)
+        Me.txtsearch.Location = New System.Drawing.Point(524, 24)
         Me.txtsearch.Margin = New System.Windows.Forms.Padding(4)
         Me.txtsearch.Name = "txtsearch"
         Me.txtsearch.Size = New System.Drawing.Size(294, 28)
@@ -486,6 +488,17 @@ Partial Class Management
         '
         Me.Timer1.Interval = 80
         '
+        'lbsearch
+        '
+        Me.lbsearch.AutoSize = True
+        Me.lbsearch.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbsearch.ForeColor = System.Drawing.Color.White
+        Me.lbsearch.Location = New System.Drawing.Point(389, 31)
+        Me.lbsearch.Name = "lbsearch"
+        Me.lbsearch.Size = New System.Drawing.Size(128, 18)
+        Me.lbsearch.TabIndex = 35
+        Me.lbsearch.Text = "Search By Name:"
+        '
         'Management
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 20.0!)
@@ -553,4 +566,5 @@ Partial Class Management
     Friend WithEvents ColumnHeader9 As ColumnHeader
     Friend WithEvents ColumnHeader10 As ColumnHeader
     Friend WithEvents txtdate As TextBox
+    Friend WithEvents lbsearch As Label
 End Class
