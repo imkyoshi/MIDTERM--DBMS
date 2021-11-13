@@ -55,7 +55,6 @@ Partial Class Management
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btnupdate = New System.Windows.Forms.Button()
         Me.dateshipped = New System.Windows.Forms.Label()
-        Me.txtdtship = New System.Windows.Forms.TextBox()
         Me.lbproductsupplier = New System.Windows.Forms.Label()
         Me.txtsupplier = New System.Windows.Forms.TextBox()
         Me.lbproductstock = New System.Windows.Forms.Label()
@@ -75,7 +74,7 @@ Partial Class Management
         Me.lbproductid = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpdtship = New System.Windows.Forms.DateTimePicker()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,7 +128,7 @@ Partial Class Management
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.DateTimePicker1)
+        Me.Panel2.Controls.Add(Me.dtpdtship)
         Me.Panel2.Controls.Add(Me.TextBox8)
         Me.Panel2.Controls.Add(Me.btnadd)
         Me.Panel2.Controls.Add(Me.btndelete)
@@ -137,7 +136,6 @@ Partial Class Management
         Me.Panel2.Controls.Add(Me.btnsave)
         Me.Panel2.Controls.Add(Me.btnupdate)
         Me.Panel2.Controls.Add(Me.dateshipped)
-        Me.Panel2.Controls.Add(Me.txtdtship)
         Me.Panel2.Controls.Add(Me.lbproductsupplier)
         Me.Panel2.Controls.Add(Me.txtsupplier)
         Me.Panel2.Controls.Add(Me.lbproductstock)
@@ -302,16 +300,6 @@ Partial Class Management
         Me.dateshipped.Size = New System.Drawing.Size(104, 18)
         Me.dateshipped.TabIndex = 27
         Me.dateshipped.Text = "Date Shipped"
-        '
-        'txtdtship
-        '
-        Me.txtdtship.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtdtship.Location = New System.Drawing.Point(111, 532)
-        Me.txtdtship.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtdtship.Name = "txtdtship"
-        Me.txtdtship.Size = New System.Drawing.Size(192, 28)
-        Me.txtdtship.TabIndex = 26
-        Me.txtdtship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'lbproductsupplier
         '
@@ -506,12 +494,12 @@ Partial Class Management
         '
         Me.Timer1.Interval = 80
         '
-        'DateTimePicker1
+        'dtpdtship
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(183, 463)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(192, 25)
-        Me.DateTimePicker1.TabIndex = 34
+        Me.dtpdtship.Location = New System.Drawing.Point(183, 463)
+        Me.dtpdtship.Name = "dtpdtship"
+        Me.dtpdtship.Size = New System.Drawing.Size(192, 25)
+        Me.dtpdtship.TabIndex = 34
         '
         'Management
         '
@@ -545,7 +533,6 @@ Partial Class Management
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Timer1 As Timer
     Friend WithEvents dateshipped As Label
-    Friend WithEvents txtdtship As TextBox
     Friend WithEvents lbproductsupplier As Label
     Friend WithEvents txtsupplier As TextBox
     Friend WithEvents lbproductstock As Label
@@ -580,5 +567,5 @@ Partial Class Management
     Friend WithEvents chstck As ColumnHeader
     Friend WithEvents chspp As ColumnHeader
     Friend WithEvents chdtshp As ColumnHeader
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpdtship As DateTimePicker
 End Class
