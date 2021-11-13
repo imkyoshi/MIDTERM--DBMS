@@ -105,7 +105,7 @@
             txtpdtmanu.Text = .SubItems(6).Text
             txtstock.Text = .SubItems(7).Text
             txtsupplier.Text = .SubItems(8).Text
-            dtpdtship.Text = .SubItems(9).Text
+            txtdate.Text = .SubItems(9).Text
         End With
     End Sub
 
