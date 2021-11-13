@@ -59,7 +59,7 @@
             .Parameters.AddWithValue("@field7", txtpdtmanu.Text)
             .Parameters.AddWithValue("@field8", txtstock.Text)
             .Parameters.AddWithValue("@field9", txtsupplier.Text)
-            .Parameters.AddWithValue("@field10", dtpdtship.Text)
+            .Parameters.AddWithValue("@field10", txtdate.Text)
         End With
         objcmd.ExecuteNonQuery()
         objcmd.Dispose()
@@ -81,7 +81,7 @@
             .Parameters.AddWithValue("@field7", txtpdtmanu.Text)
             .Parameters.AddWithValue("@field8", txtstock.Text)
             .Parameters.AddWithValue("@field9", txtsupplier.Text)
-            .Parameters.AddWithValue("@field10", dtpdtship.Text)
+            .Parameters.AddWithValue("@field10", txtdate.Text)
         End With
         objcmd.ExecuteNonQuery()
         objcmd.Dispose()

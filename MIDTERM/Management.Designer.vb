@@ -64,7 +64,6 @@ Partial Class Management
         Me.lbproductid = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.dtpdtship = New System.Windows.Forms.DateTimePicker()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -75,6 +74,7 @@ Partial Class Management
         Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.txtdate = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -128,7 +128,7 @@ Partial Class Management
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
-        Me.Panel2.Controls.Add(Me.dtpdtship)
+        Me.Panel2.Controls.Add(Me.txtdate)
         Me.Panel2.Controls.Add(Me.TextBox8)
         Me.Panel2.Controls.Add(Me.btnadd)
         Me.Panel2.Controls.Add(Me.btndelete)
@@ -435,13 +435,6 @@ Partial Class Management
         '
         Me.Timer1.Interval = 80
         '
-        'dtpdtship
-        '
-        Me.dtpdtship.Location = New System.Drawing.Point(183, 463)
-        Me.dtpdtship.Name = "dtpdtship"
-        Me.dtpdtship.Size = New System.Drawing.Size(192, 25)
-        Me.dtpdtship.TabIndex = 34
-        '
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "ProductID"
@@ -481,6 +474,17 @@ Partial Class Management
         'ColumnHeader10
         '
         Me.ColumnHeader10.Text = "DateShipped"
+        '
+        'txtdate
+        '
+        Me.txtdate.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtdate.Location = New System.Drawing.Point(183, 453)
+        Me.txtdate.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtdate.Name = "txtdate"
+        Me.txtdate.Size = New System.Drawing.Size(192, 28)
+        Me.txtdate.TabIndex = 34
+        Me.txtdate.Text = "11/13/2021"
+        Me.txtdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Management
         '
@@ -538,7 +542,6 @@ Partial Class Management
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents btnadd As Button
     Friend WithEvents btndelete As Button
-    Friend WithEvents dtpdtship As DateTimePicker
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
@@ -549,4 +552,5 @@ Partial Class Management
     Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents ColumnHeader9 As ColumnHeader
     Friend WithEvents ColumnHeader10 As ColumnHeader
+    Friend WithEvents txtdate As TextBox
 End Class
