@@ -42,16 +42,6 @@ Partial Class Management
         Me.btnadd = New System.Windows.Forms.Button()
         Me.btndelete = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.chpdtid = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chpdtnme = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chpdtbrnd = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chpdtctgry = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chpdtqty = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chpdtdcrpt = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chpdmnuft = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chstck = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chspp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.chdtshp = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btnupdate = New System.Windows.Forms.Button()
         Me.dateshipped = New System.Windows.Forms.Label()
@@ -75,6 +65,16 @@ Partial Class Management
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.dtpdtship = New System.Windows.Forms.DateTimePicker()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -198,7 +198,7 @@ Partial Class Management
         'ListView1
         '
         Me.ListView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.chpdtid, Me.chpdtnme, Me.chpdtbrnd, Me.chpdtctgry, Me.chpdtqty, Me.chpdtdcrpt, Me.chpdmnuft, Me.chstck, Me.chspp, Me.chdtshp})
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
         Me.ListView1.HideSelection = False
         Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5, ListViewItem6, ListViewItem7, ListViewItem8, ListViewItem9, ListViewItem10})
         Me.ListView1.Location = New System.Drawing.Point(392, 68)
@@ -206,65 +206,6 @@ Partial Class Management
         Me.ListView1.Size = New System.Drawing.Size(749, 416)
         Me.ListView1.TabIndex = 30
         Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
-        'chpdtid
-        '
-        Me.chpdtid.Text = "ProductID"
-        Me.chpdtid.Width = 900
-        '
-        'chpdtnme
-        '
-        Me.chpdtnme.Text = "ProductName"
-        Me.chpdtnme.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chpdtnme.Width = 500
-        '
-        'chpdtbrnd
-        '
-        Me.chpdtbrnd.Text = "ProductBrand"
-        Me.chpdtbrnd.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chpdtbrnd.Width = 500
-        '
-        'chpdtctgry
-        '
-        Me.chpdtctgry.Text = "ProductCategory"
-        Me.chpdtctgry.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chpdtctgry.Width = 500
-        '
-        'chpdtqty
-        '
-        Me.chpdtqty.Text = "ProductQuantity"
-        Me.chpdtqty.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chpdtqty.Width = 500
-        '
-        'chpdtdcrpt
-        '
-        Me.chpdtdcrpt.Text = "ProductDescription"
-        Me.chpdtdcrpt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chpdtdcrpt.Width = 500
-        '
-        'chpdmnuft
-        '
-        Me.chpdmnuft.Text = "ProductManufacturer"
-        Me.chpdmnuft.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chpdmnuft.Width = 500
-        '
-        'chstck
-        '
-        Me.chstck.Text = "Stock"
-        Me.chstck.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chstck.Width = 500
-        '
-        'chspp
-        '
-        Me.chspp.Text = "Supplier"
-        Me.chspp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chspp.Width = 500
-        '
-        'chdtshp
-        '
-        Me.chdtshp.Text = "Date Shipped"
-        Me.chdtshp.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.chdtshp.Width = 500
         '
         'btnsave
         '
@@ -501,6 +442,46 @@ Partial Class Management
         Me.dtpdtship.Size = New System.Drawing.Size(192, 25)
         Me.dtpdtship.TabIndex = 34
         '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ProductID"
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "ProductName"
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "ProductBrand"
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "ProductCategory"
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "ProductQuantity"
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "ProductDescription"
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "ProductManufacturer"
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Stock"
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "Supplier"
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "DateShipped"
+        '
         'Management
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 20.0!)
@@ -557,15 +538,15 @@ Partial Class Management
     Friend WithEvents TextBox8 As TextBox
     Friend WithEvents btnadd As Button
     Friend WithEvents btndelete As Button
-    Friend WithEvents chpdtid As ColumnHeader
-    Friend WithEvents chpdtnme As ColumnHeader
-    Friend WithEvents chpdtbrnd As ColumnHeader
-    Friend WithEvents chpdtctgry As ColumnHeader
-    Friend WithEvents chpdtqty As ColumnHeader
-    Friend WithEvents chpdtdcrpt As ColumnHeader
-    Friend WithEvents chpdmnuft As ColumnHeader
-    Friend WithEvents chstck As ColumnHeader
-    Friend WithEvents chspp As ColumnHeader
-    Friend WithEvents chdtshp As ColumnHeader
     Friend WithEvents dtpdtship As DateTimePicker
+    Friend WithEvents ColumnHeader1 As ColumnHeader
+    Friend WithEvents ColumnHeader2 As ColumnHeader
+    Friend WithEvents ColumnHeader3 As ColumnHeader
+    Friend WithEvents ColumnHeader4 As ColumnHeader
+    Friend WithEvents ColumnHeader5 As ColumnHeader
+    Friend WithEvents ColumnHeader6 As ColumnHeader
+    Friend WithEvents ColumnHeader7 As ColumnHeader
+    Friend WithEvents ColumnHeader8 As ColumnHeader
+    Friend WithEvents ColumnHeader9 As ColumnHeader
+    Friend WithEvents ColumnHeader10 As ColumnHeader
 End Class
