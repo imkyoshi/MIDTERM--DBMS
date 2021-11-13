@@ -38,10 +38,21 @@ Partial Class Management
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.btnadd = New System.Windows.Forms.Button()
+        Me.txtdate = New System.Windows.Forms.TextBox()
+        Me.txtsearch = New System.Windows.Forms.TextBox()
+        Me.btnsearch = New System.Windows.Forms.Button()
         Me.btndelete = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btnupdate = New System.Windows.Forms.Button()
         Me.dateshipped = New System.Windows.Forms.Label()
@@ -64,17 +75,6 @@ Partial Class Management
         Me.lbproductid = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.txtdate = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -129,8 +129,8 @@ Partial Class Management
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Panel2.Controls.Add(Me.txtdate)
-        Me.Panel2.Controls.Add(Me.TextBox8)
-        Me.Panel2.Controls.Add(Me.btnadd)
+        Me.Panel2.Controls.Add(Me.txtsearch)
+        Me.Panel2.Controls.Add(Me.btnsearch)
         Me.Panel2.Controls.Add(Me.btndelete)
         Me.Panel2.Controls.Add(Me.ListView1)
         Me.Panel2.Controls.Add(Me.btnsave)
@@ -161,27 +161,38 @@ Partial Class Management
         Me.Panel2.Size = New System.Drawing.Size(1170, 589)
         Me.Panel2.TabIndex = 2
         '
-        'TextBox8
+        'txtdate
         '
-        Me.TextBox8.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox8.Location = New System.Drawing.Point(392, 23)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(294, 28)
-        Me.TextBox8.TabIndex = 33
-        Me.TextBox8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtdate.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtdate.Location = New System.Drawing.Point(183, 453)
+        Me.txtdate.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtdate.Name = "txtdate"
+        Me.txtdate.Size = New System.Drawing.Size(192, 28)
+        Me.txtdate.TabIndex = 34
+        Me.txtdate.Text = "11/13/2021"
+        Me.txtdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'btnadd
+        'txtsearch
         '
-        Me.btnadd.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
-        Me.btnadd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnadd.ForeColor = System.Drawing.Color.White
-        Me.btnadd.Location = New System.Drawing.Point(774, 512)
-        Me.btnadd.Name = "btnadd"
-        Me.btnadd.Size = New System.Drawing.Size(121, 48)
-        Me.btnadd.TabIndex = 32
-        Me.btnadd.Text = "Search"
-        Me.btnadd.UseVisualStyleBackColor = False
+        Me.txtsearch.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtsearch.Location = New System.Drawing.Point(392, 23)
+        Me.txtsearch.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtsearch.Name = "txtsearch"
+        Me.txtsearch.Size = New System.Drawing.Size(294, 28)
+        Me.txtsearch.TabIndex = 33
+        Me.txtsearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'btnsearch
+        '
+        Me.btnsearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
+        Me.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnsearch.ForeColor = System.Drawing.Color.White
+        Me.btnsearch.Location = New System.Drawing.Point(774, 512)
+        Me.btnsearch.Name = "btnsearch"
+        Me.btnsearch.Size = New System.Drawing.Size(121, 48)
+        Me.btnsearch.TabIndex = 32
+        Me.btnsearch.Text = "Search"
+        Me.btnsearch.UseVisualStyleBackColor = False
         '
         'btndelete
         '
@@ -206,6 +217,46 @@ Partial Class Management
         Me.ListView1.Size = New System.Drawing.Size(749, 416)
         Me.ListView1.TabIndex = 30
         Me.ListView1.UseCompatibleStateImageBehavior = False
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ProductID"
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "ProductName"
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "ProductBrand"
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "ProductCategory"
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "ProductQuantity"
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "ProductDescription"
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "ProductManufacturer"
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Stock"
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "Supplier"
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "DateShipped"
         '
         'btnsave
         '
@@ -435,57 +486,6 @@ Partial Class Management
         '
         Me.Timer1.Interval = 80
         '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "ProductID"
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "ProductName"
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "ProductBrand"
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "ProductCategory"
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "ProductQuantity"
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "ProductDescription"
-        '
-        'ColumnHeader7
-        '
-        Me.ColumnHeader7.Text = "ProductManufacturer"
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = "Stock"
-        '
-        'ColumnHeader9
-        '
-        Me.ColumnHeader9.Text = "Supplier"
-        '
-        'ColumnHeader10
-        '
-        Me.ColumnHeader10.Text = "DateShipped"
-        '
-        'txtdate
-        '
-        Me.txtdate.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtdate.Location = New System.Drawing.Point(183, 453)
-        Me.txtdate.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtdate.Name = "txtdate"
-        Me.txtdate.Size = New System.Drawing.Size(192, 28)
-        Me.txtdate.TabIndex = 34
-        Me.txtdate.Text = "11/13/2021"
-        Me.txtdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'Management
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 20.0!)
@@ -539,8 +539,8 @@ Partial Class Management
     Friend WithEvents ListView1 As ListView
     Friend WithEvents btnsave As Button
     Friend WithEvents btnupdate As Button
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents btnadd As Button
+    Friend WithEvents txtsearch As TextBox
+    Friend WithEvents btnsearch As Button
     Friend WithEvents btndelete As Button
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader

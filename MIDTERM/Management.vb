@@ -91,7 +91,36 @@
 
 
     Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
-
+        strsql = "DELETE tbl_pcperipherals WHERE ProductID=@field1"
+        objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
+        With objcmd
+            .Parameters.AddWithValue("@field1", txtpdtid.Text)
+        End With
+        objcmd.ExecuteNonQuery()
+        objcmd.Dispose()
+        MsgBox("Recrod Deleted!")
+        Me.fillsview()
+    End Sub
+    Private Sub Btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
+        strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE @field2 '%'"
+        objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
+        With objcmd
+            .Parameters.AddWithValue("@field1", txtsearch.Text)
+        End With
+        objcmd.ExecuteNonQuery()
+        While (objdr.Read())
+            With ListView1.Items.Add(objdr("ProductID"))
+                .SubItems.add(objdr("ProductName"))
+                .subitems.add(objdr("ProductBrand"))
+                .subitems.add(objdr("ProductCategory"))
+                .subitems.add(objdr("ProductQuantity"))
+                .subitems.add(objdr("ProductDescription"))
+                .subitems.add(objdr("ProductManufacturer"))
+                .subitems.add(objdr("Stock"))
+                .subitems.add(objdr("Supplier"))
+                .subitems.add(objdr("DateShipped"))
+            End With
+        End While
     End Sub
 
     Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseClick
