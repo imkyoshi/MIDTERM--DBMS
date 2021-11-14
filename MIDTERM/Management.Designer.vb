@@ -40,13 +40,13 @@ Partial Class Management
         Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.lbsearch = New System.Windows.Forms.Label()
-        Me.txtdate = New System.Windows.Forms.TextBox()
+        Me.txtcontact = New System.Windows.Forms.TextBox()
         Me.txtsearch = New System.Windows.Forms.TextBox()
         Me.btnsearch = New System.Windows.Forms.Button()
         Me.btndelete = New System.Windows.Forms.Button()
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btnupdate = New System.Windows.Forms.Button()
-        Me.dateshipped = New System.Windows.Forms.Label()
+        Me.lbcontactno = New System.Windows.Forms.Label()
         Me.lbproductsupplier = New System.Windows.Forms.Label()
         Me.txtsupplier = New System.Windows.Forms.TextBox()
         Me.lbproductstock = New System.Windows.Forms.Label()
@@ -121,13 +121,13 @@ Partial Class Management
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.Panel2.Controls.Add(Me.ListView1)
         Me.Panel2.Controls.Add(Me.lbsearch)
-        Me.Panel2.Controls.Add(Me.txtdate)
+        Me.Panel2.Controls.Add(Me.txtcontact)
         Me.Panel2.Controls.Add(Me.txtsearch)
         Me.Panel2.Controls.Add(Me.btnsearch)
         Me.Panel2.Controls.Add(Me.btndelete)
         Me.Panel2.Controls.Add(Me.btnsave)
         Me.Panel2.Controls.Add(Me.btnupdate)
-        Me.Panel2.Controls.Add(Me.dateshipped)
+        Me.Panel2.Controls.Add(Me.lbcontactno)
         Me.Panel2.Controls.Add(Me.lbproductsupplier)
         Me.Panel2.Controls.Add(Me.txtsupplier)
         Me.Panel2.Controls.Add(Me.lbproductstock)
@@ -236,16 +236,15 @@ Partial Class Management
         Me.lbsearch.TabIndex = 35
         Me.lbsearch.Text = "Search By Name:"
         '
-        'txtdate
+        'txtcontact
         '
-        Me.txtdate.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtdate.Location = New System.Drawing.Point(183, 453)
-        Me.txtdate.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtdate.Name = "txtdate"
-        Me.txtdate.Size = New System.Drawing.Size(192, 28)
-        Me.txtdate.TabIndex = 34
-        Me.txtdate.Text = "11/13/2021"
-        Me.txtdate.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txtcontact.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtcontact.Location = New System.Drawing.Point(188, 453)
+        Me.txtcontact.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtcontact.Name = "txtcontact"
+        Me.txtcontact.Size = New System.Drawing.Size(192, 28)
+        Me.txtcontact.TabIndex = 34
+        Me.txtcontact.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'txtsearch
         '
@@ -305,16 +304,16 @@ Partial Class Management
         Me.btnupdate.Text = "Update"
         Me.btnupdate.UseVisualStyleBackColor = False
         '
-        'dateshipped
+        'lbcontactno
         '
-        Me.dateshipped.AutoSize = True
-        Me.dateshipped.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.dateshipped.ForeColor = System.Drawing.Color.White
-        Me.dateshipped.Location = New System.Drawing.Point(77, 460)
-        Me.dateshipped.Name = "dateshipped"
-        Me.dateshipped.Size = New System.Drawing.Size(104, 18)
-        Me.dateshipped.TabIndex = 27
-        Me.dateshipped.Text = "Date Shipped"
+        Me.lbcontactno.AutoSize = True
+        Me.lbcontactno.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbcontactno.ForeColor = System.Drawing.Color.White
+        Me.lbcontactno.Location = New System.Drawing.Point(90, 460)
+        Me.lbcontactno.Name = "lbcontactno"
+        Me.lbcontactno.Size = New System.Drawing.Size(91, 18)
+        Me.lbcontactno.TabIndex = 27
+        Me.lbcontactno.Text = "Contact No:"
         '
         'lbproductsupplier
         '
@@ -540,7 +539,7 @@ Partial Class Management
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Timer1 As Timer
-    Friend WithEvents dateshipped As Label
+    Friend WithEvents lbcontactno As Label
     Friend WithEvents lbproductsupplier As Label
     Friend WithEvents txtsupplier As TextBox
     Friend WithEvents lbproductstock As Label
@@ -564,7 +563,7 @@ Partial Class Management
     Friend WithEvents txtsearch As TextBox
     Friend WithEvents btnsearch As Button
     Friend WithEvents btndelete As Button
-    Friend WithEvents txtdate As TextBox
+    Friend WithEvents txtcontact As TextBox
     Friend WithEvents lbsearch As Label
     Friend WithEvents ListView1 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
