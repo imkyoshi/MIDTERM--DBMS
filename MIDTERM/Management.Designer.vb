@@ -23,36 +23,16 @@ Partial Class Management
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product ID"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Name"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Brand"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Category"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Quanity"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem6 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Description"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem7 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Product Manufacturer"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem8 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Stock"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem9 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Supplier"}, -1, System.Drawing.Color.White, System.Drawing.Color.Empty, New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
-        Dim ListViewItem10 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"Date Shipped"}, -1, System.Drawing.Color.White, System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(130, Byte), Integer)), New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte)))
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.lbsearch = New System.Windows.Forms.Label()
         Me.txtdate = New System.Windows.Forms.TextBox()
         Me.txtsearch = New System.Windows.Forms.TextBox()
         Me.btnsearch = New System.Windows.Forms.Button()
         Me.btndelete = New System.Windows.Forms.Button()
-        Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
-        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.btnsave = New System.Windows.Forms.Button()
         Me.btnupdate = New System.Windows.Forms.Button()
         Me.dateshipped = New System.Windows.Forms.Label()
@@ -75,7 +55,17 @@ Partial Class Management
         Me.lbproductid = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.lbsearch = New System.Windows.Forms.Label()
+        Me.ListView1 = New System.Windows.Forms.ListView()
+        Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader2 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader3 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader4 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader5 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader6 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader7 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader8 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader9 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.ColumnHeader10 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -92,7 +82,7 @@ Partial Class Management
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1170, 48)
+        Me.Panel1.Size = New System.Drawing.Size(1334, 48)
         Me.Panel1.TabIndex = 1
         '
         'PictureBox2
@@ -129,12 +119,12 @@ Partial Class Management
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.ListView1)
         Me.Panel2.Controls.Add(Me.lbsearch)
         Me.Panel2.Controls.Add(Me.txtdate)
         Me.Panel2.Controls.Add(Me.txtsearch)
         Me.Panel2.Controls.Add(Me.btnsearch)
         Me.Panel2.Controls.Add(Me.btndelete)
-        Me.Panel2.Controls.Add(Me.ListView1)
         Me.Panel2.Controls.Add(Me.btnsave)
         Me.Panel2.Controls.Add(Me.btnupdate)
         Me.Panel2.Controls.Add(Me.dateshipped)
@@ -160,8 +150,19 @@ Partial Class Management
         Me.Panel2.Location = New System.Drawing.Point(0, 48)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1170, 589)
+        Me.Panel2.Size = New System.Drawing.Size(1334, 589)
         Me.Panel2.TabIndex = 2
+        '
+        'lbsearch
+        '
+        Me.lbsearch.AutoSize = True
+        Me.lbsearch.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbsearch.ForeColor = System.Drawing.Color.White
+        Me.lbsearch.Location = New System.Drawing.Point(389, 31)
+        Me.lbsearch.Name = "lbsearch"
+        Me.lbsearch.Size = New System.Drawing.Size(128, 18)
+        Me.lbsearch.TabIndex = 35
+        Me.lbsearch.Text = "Search By Name:"
         '
         'txtdate
         '
@@ -189,7 +190,7 @@ Partial Class Management
         Me.btnsearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnsearch.ForeColor = System.Drawing.Color.White
-        Me.btnsearch.Location = New System.Drawing.Point(774, 512)
+        Me.btnsearch.Location = New System.Drawing.Point(850, 514)
         Me.btnsearch.Name = "btnsearch"
         Me.btnsearch.Size = New System.Drawing.Size(121, 48)
         Me.btnsearch.TabIndex = 32
@@ -201,71 +202,19 @@ Partial Class Management
         Me.btndelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btndelete.ForeColor = System.Drawing.Color.White
-        Me.btndelete.Location = New System.Drawing.Point(613, 512)
+        Me.btndelete.Location = New System.Drawing.Point(689, 514)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(121, 48)
         Me.btndelete.TabIndex = 31
         Me.btndelete.Text = "Delete"
         Me.btndelete.UseVisualStyleBackColor = False
         '
-        'ListView1
-        '
-        Me.ListView1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(117, Byte), Integer), CType(CType(130, Byte), Integer))
-        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
-        Me.ListView1.HideSelection = False
-        Me.ListView1.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5, ListViewItem6, ListViewItem7, ListViewItem8, ListViewItem9, ListViewItem10})
-        Me.ListView1.Location = New System.Drawing.Point(392, 68)
-        Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(749, 416)
-        Me.ListView1.TabIndex = 30
-        Me.ListView1.UseCompatibleStateImageBehavior = False
-        '
-        'ColumnHeader1
-        '
-        Me.ColumnHeader1.Text = "ProductID"
-        '
-        'ColumnHeader2
-        '
-        Me.ColumnHeader2.Text = "ProductName"
-        '
-        'ColumnHeader3
-        '
-        Me.ColumnHeader3.Text = "ProductBrand"
-        '
-        'ColumnHeader4
-        '
-        Me.ColumnHeader4.Text = "ProductCategory"
-        '
-        'ColumnHeader5
-        '
-        Me.ColumnHeader5.Text = "ProductQuantity"
-        '
-        'ColumnHeader6
-        '
-        Me.ColumnHeader6.Text = "ProductDescription"
-        '
-        'ColumnHeader7
-        '
-        Me.ColumnHeader7.Text = "ProductManufacturer"
-        '
-        'ColumnHeader8
-        '
-        Me.ColumnHeader8.Text = "Stock"
-        '
-        'ColumnHeader9
-        '
-        Me.ColumnHeader9.Text = "Supplier"
-        '
-        'ColumnHeader10
-        '
-        Me.ColumnHeader10.Text = "DateShipped"
-        '
         'btnsave
         '
         Me.btnsave.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnsave.ForeColor = System.Drawing.Color.White
-        Me.btnsave.Location = New System.Drawing.Point(293, 512)
+        Me.btnsave.Location = New System.Drawing.Point(369, 514)
         Me.btnsave.Name = "btnsave"
         Me.btnsave.Size = New System.Drawing.Size(121, 48)
         Me.btnsave.TabIndex = 29
@@ -277,7 +226,7 @@ Partial Class Management
         Me.btnupdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnupdate.ForeColor = System.Drawing.Color.White
-        Me.btnupdate.Location = New System.Drawing.Point(453, 512)
+        Me.btnupdate.Location = New System.Drawing.Point(529, 514)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(121, 48)
         Me.btnupdate.TabIndex = 28
@@ -447,7 +396,7 @@ Partial Class Management
         Me.lbproductname.AutoSize = True
         Me.lbproductname.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbproductname.ForeColor = System.Drawing.Color.White
-        Me.lbproductname.Location = New System.Drawing.Point(68, 120)
+        Me.lbproductname.Location = New System.Drawing.Point(68, 123)
         Me.lbproductname.Name = "lbproductname"
         Me.lbproductname.Size = New System.Drawing.Size(108, 18)
         Me.lbproductname.TabIndex = 12
@@ -488,22 +437,84 @@ Partial Class Management
         '
         Me.Timer1.Interval = 80
         '
-        'lbsearch
+        'ListView1
         '
-        Me.lbsearch.AutoSize = True
-        Me.lbsearch.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lbsearch.ForeColor = System.Drawing.Color.White
-        Me.lbsearch.Location = New System.Drawing.Point(389, 31)
-        Me.lbsearch.Name = "lbsearch"
-        Me.lbsearch.Size = New System.Drawing.Size(128, 18)
-        Me.lbsearch.TabIndex = 35
-        Me.lbsearch.Text = "Search By Name:"
+        Me.ListView1.BackColor = System.Drawing.Color.Black
+        Me.ListView1.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ColumnHeader1, Me.ColumnHeader2, Me.ColumnHeader3, Me.ColumnHeader4, Me.ColumnHeader5, Me.ColumnHeader6, Me.ColumnHeader7, Me.ColumnHeader8, Me.ColumnHeader9, Me.ColumnHeader10})
+        Me.ListView1.Font = New System.Drawing.Font("Arial Narrow", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ListView1.ForeColor = System.Drawing.Color.Lime
+        Me.ListView1.FullRowSelect = True
+        Me.ListView1.GridLines = True
+        Me.ListView1.HideSelection = False
+        Me.ListView1.Location = New System.Drawing.Point(386, 68)
+        Me.ListView1.Name = "ListView1"
+        Me.ListView1.Size = New System.Drawing.Size(926, 413)
+        Me.ListView1.TabIndex = 36
+        Me.ListView1.UseCompatibleStateImageBehavior = False
+        Me.ListView1.View = System.Windows.Forms.View.Details
+        '
+        'ColumnHeader1
+        '
+        Me.ColumnHeader1.Text = "ProductID"
+        Me.ColumnHeader1.Width = 80
+        '
+        'ColumnHeader2
+        '
+        Me.ColumnHeader2.Text = "ProductName"
+        Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader2.Width = 90
+        '
+        'ColumnHeader3
+        '
+        Me.ColumnHeader3.Text = "ProductBrand"
+        Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader3.Width = 90
+        '
+        'ColumnHeader4
+        '
+        Me.ColumnHeader4.Text = "ProductCategory"
+        Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader4.Width = 105
+        '
+        'ColumnHeader5
+        '
+        Me.ColumnHeader5.Text = "ProductQuantity"
+        Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader5.Width = 100
+        '
+        'ColumnHeader6
+        '
+        Me.ColumnHeader6.Text = "ProductDescription"
+        Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader6.Width = 118
+        '
+        'ColumnHeader7
+        '
+        Me.ColumnHeader7.Text = "ProductManufacturer"
+        Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader7.Width = 129
+        '
+        'ColumnHeader8
+        '
+        Me.ColumnHeader8.Text = "Stock"
+        Me.ColumnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader9
+        '
+        Me.ColumnHeader9.Text = "Supplier"
+        Me.ColumnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'ColumnHeader10
+        '
+        Me.ColumnHeader10.Text = "DateShipped"
+        Me.ColumnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader10.Width = 90
         '
         'Management
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1170, 637)
+        Me.ClientSize = New System.Drawing.Size(1334, 637)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -549,12 +560,14 @@ Partial Class Management
     Friend WithEvents txtpdtnme As TextBox
     Friend WithEvents lbproductid As Label
     Friend WithEvents txtpdtid As TextBox
-    Friend WithEvents ListView1 As ListView
     Friend WithEvents btnsave As Button
     Friend WithEvents btnupdate As Button
     Friend WithEvents txtsearch As TextBox
     Friend WithEvents btnsearch As Button
     Friend WithEvents btndelete As Button
+    Friend WithEvents txtdate As TextBox
+    Friend WithEvents lbsearch As Label
+    Friend WithEvents ListView1 As ListView
     Friend WithEvents ColumnHeader1 As ColumnHeader
     Friend WithEvents ColumnHeader2 As ColumnHeader
     Friend WithEvents ColumnHeader3 As ColumnHeader
@@ -565,6 +578,4 @@ Partial Class Management
     Friend WithEvents ColumnHeader8 As ColumnHeader
     Friend WithEvents ColumnHeader9 As ColumnHeader
     Friend WithEvents ColumnHeader10 As ColumnHeader
-    Friend WithEvents txtdate As TextBox
-    Friend WithEvents lbsearch As Label
 End Class

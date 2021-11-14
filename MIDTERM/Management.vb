@@ -123,7 +123,7 @@
         End While
     End Sub
 
-    Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseClick
+    Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs)
         With ListView1.SelectedItems(0)
             txtpdtid.Text = .SubItems(0).Text
             txtpdtnme.Text = .SubItems(1).Text
@@ -138,7 +138,7 @@
         End With
     End Sub
 
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListView1.SelectedIndexChanged
+    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs)
 
     End Sub
 End Class
