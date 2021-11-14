@@ -310,7 +310,7 @@ Partial Class Management
         Me.dateshipped.AutoSize = True
         Me.dateshipped.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.dateshipped.ForeColor = System.Drawing.Color.White
-        Me.dateshipped.Location = New System.Drawing.Point(72, 463)
+        Me.dateshipped.Location = New System.Drawing.Point(72, 460)
         Me.dateshipped.Name = "dateshipped"
         Me.dateshipped.Size = New System.Drawing.Size(104, 18)
         Me.dateshipped.TabIndex = 27
@@ -468,7 +468,7 @@ Partial Class Management
         Me.lbproductname.AutoSize = True
         Me.lbproductname.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbproductname.ForeColor = System.Drawing.Color.White
-        Me.lbproductname.Location = New System.Drawing.Point(65, 123)
+        Me.lbproductname.Location = New System.Drawing.Point(68, 120)
         Me.lbproductname.Name = "lbproductname"
         Me.lbproductname.Size = New System.Drawing.Size(108, 18)
         Me.lbproductname.TabIndex = 12
@@ -489,7 +489,7 @@ Partial Class Management
         Me.lbproductid.AutoSize = True
         Me.lbproductid.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbproductid.ForeColor = System.Drawing.Color.White
-        Me.lbproductid.Location = New System.Drawing.Point(65, 78)
+        Me.lbproductid.Location = New System.Drawing.Point(93, 75)
         Me.lbproductid.Name = "lbproductid"
         Me.lbproductid.Size = New System.Drawing.Size(83, 18)
         Me.lbproductid.TabIndex = 11
