@@ -121,25 +121,32 @@
         Me.fillsview()
     End Sub
     Private Sub Btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
-        strsql = "SELECT * FROM tbl_pcperipherals WHERE ProductName like @field1 '%'"
-        objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
-        With objcmd
-            .Parameters.AddWithValue("@field1", txtsearch.Text)
-        End With
-        objcmd.ExecuteNonQuery()
-        While (objdr.Read())
-            With ListView1.Items.Add(objdr("ProductID"))
-                .SubItems.add(objdr("ProductName"))
-                .subitems.add(objdr("ProductBrand"))
-                .subitems.add(objdr("ProductCategory"))
-                .subitems.add(objdr("ProductQuantity"))
-                .subitems.add(objdr("ProductDescription"))
-                .subitems.add(objdr("ProductManufacturer"))
-                .subitems.add(objdr("Stock"))
-                .subitems.add(objdr("Supplier"))
-                .subitems.add(objdr("ContactNo"))
+        Try
+            ListView1.Items.Clear()
+            strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE @field1 '%'"
+            objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
+            With objcmd
+                .Parameters.AddWithValue("@field1", txtsearch.Text)
             End With
-        End While
+            objdr = objcmd.ExecuteReader
+            While (objdr.Read)
+                With ListView1.Items.Add(objdr("ProductID"))
+                    .SubItems.add(objdr("ProductName"))
+                    .subitems.add(objdr("ProductBrand"))
+                    .subitems.add(objdr("ProductCategory"))
+                    .subitems.add(objdr("ProductQuantity"))
+                    .subitems.add(objdr("ProductDescription"))
+                    .subitems.add(objdr("ProductManufacturer"))
+                    .subitems.add(objdr("Stock"))
+                    .subitems.add(objdr("Supplier"))
+                    .subitems.add(objdr("ContactNo"))
+                End With
+                objcmd.Dispose()
+                objdr.Close()
+            End While
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
     End Sub
 
     Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseClick

@@ -239,7 +239,7 @@ Partial Class Management
         'txtcontact
         '
         Me.txtcontact.Font = New System.Drawing.Font("Arial Narrow", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtcontact.Location = New System.Drawing.Point(188, 453)
+        Me.txtcontact.Location = New System.Drawing.Point(183, 456)
         Me.txtcontact.Margin = New System.Windows.Forms.Padding(4)
         Me.txtcontact.Name = "txtcontact"
         Me.txtcontact.Size = New System.Drawing.Size(192, 28)
@@ -309,7 +309,7 @@ Partial Class Management
         Me.lbcontactno.AutoSize = True
         Me.lbcontactno.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbcontactno.ForeColor = System.Drawing.Color.White
-        Me.lbcontactno.Location = New System.Drawing.Point(90, 460)
+        Me.lbcontactno.Location = New System.Drawing.Point(90, 463)
         Me.lbcontactno.Name = "lbcontactno"
         Me.lbcontactno.Size = New System.Drawing.Size(91, 18)
         Me.lbcontactno.TabIndex = 27
