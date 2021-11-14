@@ -69,7 +69,7 @@
 
     Private Sub Btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
         strsql = "UPDATE tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, ProductDescription=@field6, ProductManufacturer=@field7, 
-        Stock=@field8,Supplier=@field9, DateShipped=@field10"
+        Stock=@field8,Supplier=@field9, DateShipped=@field10 WHERE ProductID=@field1"
         objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
         With objcmd
             .Parameters.AddWithValue("@field1", txtpdtid.Text)
