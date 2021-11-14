@@ -146,6 +146,7 @@
             End While
         Catch ex As Exception
             MsgBox(ex.Message)
+            Me.fillsview()
         End Try
     End Sub
 
