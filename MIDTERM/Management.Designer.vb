@@ -88,7 +88,7 @@ Partial Class Management
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.MIDTERM.My.Resources.Resources.cross
-        Me.PictureBox2.Location = New System.Drawing.Point(1136, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(1251, 12)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(23, 23)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -98,7 +98,7 @@ Partial Class Management
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.MIDTERM.My.Resources.Resources.minimize
-        Me.PictureBox1.Location = New System.Drawing.Point(1107, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(1222, 12)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(23, 23)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
