@@ -102,7 +102,7 @@
         Me.fillsview()
     End Sub
     Private Sub Btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
-        strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE @field2 '%'"
+        strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE @field1 '%'"
         objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
         With objcmd
             .Parameters.AddWithValue("@field1", txtsearch.Text)
@@ -123,7 +123,7 @@
         End While
     End Sub
 
-    Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs)
+    Private Sub ListView1_MouseClick(sender As Object, e As MouseEventArgs) Handles ListView1.MouseClick
         With ListView1.SelectedItems(0)
             txtpdtid.Text = .SubItems(0).Text
             txtpdtnme.Text = .SubItems(1).Text
@@ -136,9 +136,5 @@
             txtsupplier.Text = .SubItems(8).Text
             txtdate.Text = .SubItems(9).Text
         End With
-    End Sub
-
-    Private Sub ListView1_SelectedIndexChanged(sender As Object, e As EventArgs)
-
     End Sub
 End Class
