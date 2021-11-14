@@ -40,6 +40,7 @@
         Else
             MsgBox("Invalid Username or Password!")
         End If
+        objconn.Close() 'FIX for Your Connection is already open'
         objcmd.Dispose()
         objdr.Close()
     End Sub

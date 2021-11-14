@@ -102,7 +102,7 @@
         Me.fillsview()
     End Sub
     Private Sub Btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
-        strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE @field1 '%'"
+        strsql = "SELECT * FROM tbl_pcperipherals WHERE ProductName like @field1"
         objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
         With objcmd
             .Parameters.AddWithValue("@field1", txtsearch.Text)
