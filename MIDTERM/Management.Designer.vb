@@ -88,7 +88,7 @@ Partial Class Management
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.MIDTERM.My.Resources.Resources.cross
-        Me.PictureBox2.Location = New System.Drawing.Point(1251, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(1289, 13)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(23, 23)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -98,7 +98,7 @@ Partial Class Management
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.MIDTERM.My.Resources.Resources.minimize
-        Me.PictureBox1.Location = New System.Drawing.Point(1222, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(1260, 13)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(23, 23)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -468,7 +468,7 @@ Partial Class Management
         Me.lbproductname.AutoSize = True
         Me.lbproductname.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbproductname.ForeColor = System.Drawing.Color.White
-        Me.lbproductname.Location = New System.Drawing.Point(68, 123)
+        Me.lbproductname.Location = New System.Drawing.Point(65, 123)
         Me.lbproductname.Name = "lbproductname"
         Me.lbproductname.Size = New System.Drawing.Size(108, 18)
         Me.lbproductname.TabIndex = 12
@@ -489,7 +489,7 @@ Partial Class Management
         Me.lbproductid.AutoSize = True
         Me.lbproductid.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lbproductid.ForeColor = System.Drawing.Color.White
-        Me.lbproductid.Location = New System.Drawing.Point(93, 75)
+        Me.lbproductid.Location = New System.Drawing.Point(65, 78)
         Me.lbproductid.Name = "lbproductid"
         Me.lbproductid.Size = New System.Drawing.Size(83, 18)
         Me.lbproductid.TabIndex = 11
