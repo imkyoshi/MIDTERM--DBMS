@@ -168,4 +168,17 @@
         LoginForm.Show()
         Me.Close()
     End Sub
+
+    Private Sub Btnclear_Click(sender As Object, e As EventArgs) Handles btnclear.Click
+        txtpdtid.Clear()
+        txtpdtnme.Clear()
+        txtpdtbrnd.Clear()
+        txtpdtctgry.Clear()
+        txtpdtqnty.Clear()
+        txtpdtdcpt.Clear()
+        txtpdtmanu.Clear()
+        txtstock.Clear()
+        txtsupplier.Clear()
+        txtcontact.Clear()
+    End Sub
 End Class

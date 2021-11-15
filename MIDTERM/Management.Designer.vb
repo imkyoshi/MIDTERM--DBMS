@@ -67,6 +67,7 @@ Partial Class Management
         Me.lbproductid = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.btnclear = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -120,6 +121,7 @@ Partial Class Management
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnclear)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.ListView1)
         Me.Panel2.Controls.Add(Me.lbsearch)
@@ -160,7 +162,7 @@ Partial Class Management
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(999, 514)
+        Me.Button1.Location = New System.Drawing.Point(1191, 514)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(121, 48)
         Me.Button1.TabIndex = 37
@@ -275,9 +277,9 @@ Partial Class Management
         Me.btnsearch.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnsearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnsearch.ForeColor = System.Drawing.Color.White
-        Me.btnsearch.Location = New System.Drawing.Point(850, 514)
+        Me.btnsearch.Location = New System.Drawing.Point(825, 24)
         Me.btnsearch.Name = "btnsearch"
-        Me.btnsearch.Size = New System.Drawing.Size(121, 48)
+        Me.btnsearch.Size = New System.Drawing.Size(63, 28)
         Me.btnsearch.TabIndex = 32
         Me.btnsearch.Text = "Search"
         Me.btnsearch.UseVisualStyleBackColor = False
@@ -287,7 +289,7 @@ Partial Class Management
         Me.btndelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btndelete.ForeColor = System.Drawing.Color.White
-        Me.btndelete.Location = New System.Drawing.Point(689, 514)
+        Me.btndelete.Location = New System.Drawing.Point(696, 514)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(121, 48)
         Me.btndelete.TabIndex = 31
@@ -299,7 +301,7 @@ Partial Class Management
         Me.btnsave.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnsave.ForeColor = System.Drawing.Color.White
-        Me.btnsave.Location = New System.Drawing.Point(369, 514)
+        Me.btnsave.Location = New System.Drawing.Point(386, 514)
         Me.btnsave.Name = "btnsave"
         Me.btnsave.Size = New System.Drawing.Size(121, 48)
         Me.btnsave.TabIndex = 29
@@ -311,7 +313,7 @@ Partial Class Management
         Me.btnupdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnupdate.ForeColor = System.Drawing.Color.White
-        Me.btnupdate.Location = New System.Drawing.Point(529, 514)
+        Me.btnupdate.Location = New System.Drawing.Point(544, 514)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(121, 48)
         Me.btnupdate.TabIndex = 28
@@ -522,6 +524,18 @@ Partial Class Management
         '
         Me.Timer1.Interval = 80
         '
+        'btnclear
+        '
+        Me.btnclear.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
+        Me.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclear.ForeColor = System.Drawing.Color.White
+        Me.btnclear.Location = New System.Drawing.Point(848, 514)
+        Me.btnclear.Name = "btnclear"
+        Me.btnclear.Size = New System.Drawing.Size(121, 48)
+        Me.btnclear.TabIndex = 38
+        Me.btnclear.Text = "Clear"
+        Me.btnclear.UseVisualStyleBackColor = False
+        '
         'Management
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 20.0!)
@@ -591,4 +605,5 @@ Partial Class Management
     Friend WithEvents ColumnHeader9 As ColumnHeader
     Friend WithEvents ColumnHeader10 As ColumnHeader
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnclear As Button
 End Class
