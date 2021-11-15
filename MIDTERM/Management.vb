@@ -40,8 +40,11 @@
     Sub fillsview()
         Try
             ListView1.Items.Clear()
-            strsql = "SELECT * FROM tbl_pcperipherals"
-            objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
+            'Safe in SQL iNJECT'
+            objcmd = New MySql.Data.MySqlClient.MySqlCommand("SELECT * FROM tbl_pcperipherals", objconn)
+            'Unsafe Vulnerable in SQL INJECT'
+            'strsql = "SELECT * FROM tbl_pcperipherals"'
+            'objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)'
             objdr = objcmd.ExecuteReader
             While (objdr.Read)
                 With ListView1.Items.Add(objdr("ProductID"))
@@ -65,9 +68,12 @@
     End Sub
 
     Private Sub Btnsave_Click(sender As Object, e As EventArgs) Handles btnsave.Click
-        strsql = "INSERT tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, ProductDescription=@field6, ProductManufacturer=@field7, 
-        Stock=@field8,Supplier=@field9, ContactNo=@field10"
-        objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
+        'Safe in SQL iNJECT'
+        objcmd = New MySql.Data.MySqlClient.MySqlCommand("INSERT tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, 
+        ProductDescription=@field6, ProductManufacturer=@field7, Stock=@field8,Supplier=@field9, ContactNo=@field10", objconn)
+        'Unsafe Vulnerable in SQL INJECT'
+        'strsql = "INSERT tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, ProductDescription=@field6, ProductManufacturer=@field7, Stock=@field8,Supplier=@field9, ContactNo=@field10"'
+        'objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)'
         With objcmd
             .Parameters.AddWithValue("@field1", txtpdtid.Text)
             .Parameters.AddWithValue("@field2", txtpdtnme.Text)
@@ -87,9 +93,12 @@
     End Sub
 
     Private Sub Btnupdate_Click(sender As Object, e As EventArgs) Handles btnupdate.Click
-        strsql = "UPDATE tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, ProductDescription=@field6, ProductManufacturer=@field7, 
-        Stock=@field8,Supplier=@field9, ContactNo=@field10 WHERE ProductID=@field1"
-        objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
+        'Safe in SQL iNJECT'
+        objcmd = New MySql.Data.MySqlClient.MySqlCommand("UPDATE tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, 
+        ProductDescription=@field6, ProductManufacturer=@field7, Stock =@field8, Supplier=@field9, ContactNo=@field10 WHERE ProductID=@field1", objconn)
+        'Unsafe Vulnerable in SQL INJECT'
+        'strsql = "UPDATE tbl_pcperipherals set ProductName=@field2, ProductBrand=@field3, ProductCategory=@field4, ProductQuantity=@field5, ProductDescription=@field6, ProductManufacturer=@field7, Stock =@field8, Supplier=@field9, ContactNo=@field10 WHERE ProductID=@field1"'
+        'objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)'
         With objcmd
             .Parameters.AddWithValue("@field1", txtpdtid.Text)
             .Parameters.AddWithValue("@field2", txtpdtnme.Text)
@@ -110,8 +119,11 @@
 
 
     Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
-        strsql = "DELETE tbl_pcperipherals WHERE ProductID=@field1"
-        objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
+        'Safe in SQL iNJECT'
+        objcmd = New MySql.Data.MySqlClient.MySqlCommand("DELETE tbl_pcperipherals WHERE ProductID=@field1", objconn)
+        'Unsafe Vulnerable in SQL INJECT'
+        'strsql = "DELETE tbl_pcperipherals WHERE ProductID=@field1"'
+        'objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)'
         With objcmd
             .Parameters.AddWithValue("@field1", txtpdtid.Text)
         End With
@@ -123,8 +135,11 @@
     Private Sub Btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
         Try
             ListView1.Items.Clear()
-            strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE concat(@field1, '%')"
-            objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
+            'Safe in SQL iNJECT'
+            objcmd = New MySql.Data.MySqlClient.MySqlCommand("SELECT tbl_pcperipherals WHERE ProductName LIKE concat(@field1, '%')", objconn)
+            'Unsafe Vulnerable in SQL INJECT'
+            'strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE concat(@field1, '%')"'
+            'objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)' 
             With objcmd
                 .Parameters.AddWithValue("@field1", txtsearch.Text)
             End With

@@ -39,8 +39,10 @@
 
     Private Sub Btnlogin_Click(sender As Object, e As EventArgs) Handles btnlogin.Click
         Dim usr, pass As String
-        strsql = "SELECT Username, Password FROM tbl_login WHERE Username = @field1 AND Password = @field2"
-        objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
+        'Safe in SQL iNJECT'
+        objcmd = New MySql.Data.MySqlClient.MySqlCommand("SELECT Username, Password FROM tbl_login WHERE Username = @field1 AND Password = @field2", objconn)
+        'strsql = "SELECT Username, Password FROM tbl_login WHERE Username = @field1 AND Password = @field2"'
+        'objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)'   'Unsafe Vulnerable in SQL INJECT'
         With objcmd
             .Parameters.AddWithValue("@field1", txtusername1.Text)
             .Parameters.AddWithValue("@field2", txtpassword1.Text)
