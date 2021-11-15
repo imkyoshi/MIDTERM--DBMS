@@ -28,6 +28,7 @@ Partial Class Management
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnclear = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
         Me.ColumnHeader1 = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
@@ -67,7 +68,7 @@ Partial Class Management
         Me.lbproductid = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnclear = New System.Windows.Forms.Button()
+        Me.btnload = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -121,6 +122,7 @@ Partial Class Management
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnload)
         Me.Panel2.Controls.Add(Me.btnclear)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.ListView1)
@@ -156,6 +158,18 @@ Partial Class Management
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(1334, 589)
         Me.Panel2.TabIndex = 2
+        '
+        'btnclear
+        '
+        Me.btnclear.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
+        Me.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnclear.ForeColor = System.Drawing.Color.White
+        Me.btnclear.Location = New System.Drawing.Point(848, 514)
+        Me.btnclear.Name = "btnclear"
+        Me.btnclear.Size = New System.Drawing.Size(121, 48)
+        Me.btnclear.TabIndex = 38
+        Me.btnclear.Text = "Clear"
+        Me.btnclear.UseVisualStyleBackColor = False
         '
         'Button1
         '
@@ -524,17 +538,17 @@ Partial Class Management
         '
         Me.Timer1.Interval = 80
         '
-        'btnclear
+        'btnload
         '
-        Me.btnclear.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
-        Me.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnclear.ForeColor = System.Drawing.Color.White
-        Me.btnclear.Location = New System.Drawing.Point(848, 514)
-        Me.btnclear.Name = "btnclear"
-        Me.btnclear.Size = New System.Drawing.Size(121, 48)
-        Me.btnclear.TabIndex = 38
-        Me.btnclear.Text = "Clear"
-        Me.btnclear.UseVisualStyleBackColor = False
+        Me.btnload.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
+        Me.btnload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnload.ForeColor = System.Drawing.Color.White
+        Me.btnload.Location = New System.Drawing.Point(894, 24)
+        Me.btnload.Name = "btnload"
+        Me.btnload.Size = New System.Drawing.Size(83, 28)
+        Me.btnload.TabIndex = 39
+        Me.btnload.Text = "Load Data"
+        Me.btnload.UseVisualStyleBackColor = False
         '
         'Management
         '
@@ -606,4 +620,5 @@ Partial Class Management
     Friend WithEvents ColumnHeader10 As ColumnHeader
     Friend WithEvents Button1 As Button
     Friend WithEvents btnclear As Button
+    Friend WithEvents btnload As Button
 End Class

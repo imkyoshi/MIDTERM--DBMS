@@ -120,7 +120,7 @@
 
     Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles btndelete.Click
         'Safe in SQL iNJECT'
-        objcmd = New MySql.Data.MySqlClient.MySqlCommand("DELETE tbl_pcperipherals WHERE ProductID=@field1", objconn)
+        objcmd = New MySql.Data.MySqlClient.MySqlCommand("DELETE FROM tbl_pcperipherals WHERE ProductID = @field1", objconn)
         'Unsafe Vulnerable in SQL INJECT'
         'strsql = "DELETE tbl_pcperipherals WHERE ProductID=@field1"'
         'objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)'
@@ -195,5 +195,35 @@
         txtstock.Clear()
         txtsupplier.Clear()
         txtcontact.Clear()
+    End Sub
+
+    Private Sub Btnload_Click(sender As Object, e As EventArgs) Handles btnload.Click
+        Try
+            ListView1.Items.Clear()
+            'Safe in SQL iNJECT'
+            objcmd = New MySql.Data.MySqlClient.MySqlCommand("SELECT * FROM tbl_pcperipherals", objconn)
+            'Unsafe Vulnerable in SQL INJECT'
+            'strsql = "SELECT * FROM tbl_pcperipherals"'
+            'objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)'
+            objdr = objcmd.ExecuteReader
+            While (objdr.Read)
+                With ListView1.Items.Add(objdr("ProductID"))
+                    .SubItems.add(objdr("ProductName"))
+                    .subitems.add(objdr("ProductBrand"))
+                    .subitems.add(objdr("ProductCategory"))
+                    .subitems.add(objdr("ProductQuantity"))
+                    .subitems.add(objdr("ProductDescription"))
+                    .subitems.add(objdr("ProductManufacturer"))
+                    .subitems.add(objdr("Stock"))
+                    .subitems.add(objdr("Supplier"))
+                    .subitems.add(objdr("ContactNo"))
+                End With
+            End While
+            objcmd.Dispose()
+            objdr.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Me.fillsview()
+        End Try
     End Sub
 End Class
