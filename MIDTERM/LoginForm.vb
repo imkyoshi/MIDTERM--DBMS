@@ -49,8 +49,9 @@
         objcmd.ExecuteNonQuery()
         objdr = objcmd.ExecuteReader
         If (objdr.Read()) Then
+            'Validating Username and password in database'
             usr = objdr("Username")
-            pass = objdr("Password") 'Validating Username and password in database'
+            pass = objdr("Password")
             MsgBox("You have successfully Login!")
             txtusername1.Clear()
             txtpassword1.Clear()
@@ -58,13 +59,22 @@
             objdr.Close()
             Me.Hide()
             Management.ShowDialog()
-        ElseIf txtusername1.Text = "test" And txtpassword1.Text <> "test" Then
-            MsgBox("Wrong password")
+        ElseIf txtusername1.Text = "" And txtpassword1.Text = "test" Then
+            'Blank username input'
+            MsgBox("Plese Enter your Username!")
             txtpassword1.Clear()
-
+        ElseIf txtusername1.Text = "test" And txtpassword1.Text = "" Then
+            'Blank password input'
+            MsgBox("Plese Enter your password!")
+            txtusername1.Clear()
+        ElseIf txtusername1.Text = "test" And txtpassword1.Text <> "test" Then
+            'Invalid password'
+            MsgBox("Wrong password!")
+            txtpassword1.Clear()
         ElseIf txtusername1.Text <> "test" And txtpassword1.Text = "test" Then
-            MsgBox("Wrong username")
-            txtusername1.Clear
+            'Invalid username'
+            MsgBox("Wrong username!")
+            txtusername1.Clear()
         Else
             MsgBox("Wrong username and password")
             txtusername1.Clear()
