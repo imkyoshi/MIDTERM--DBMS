@@ -136,7 +136,7 @@
         Try
             ListView1.Items.Clear()
             'Safe in SQL iNJECT'
-            objcmd = New MySql.Data.MySqlClient.MySqlCommand("SELECT tbl_pcperipherals WHERE ProductName LIKE concat(@field1, '%')", objconn)
+            objcmd = New MySql.Data.MySqlClient.MySqlCommand("SELECT * FROM tbl_pcperipherals WHERE ProductName LIKE  @field1 '%'", objconn)
             'Unsafe Vulnerable in SQL INJECT'
             'strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE concat(@field1, '%')"'
             'objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)' 
@@ -156,9 +156,9 @@
                     .subitems.add(objdr("Supplier"))
                     .subitems.add(objdr("ContactNo"))
                 End With
-                objcmd.Dispose()
-                objdr.Close()
             End While
+            objcmd.Dispose()
+            objdr.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
             Me.fillsview()
