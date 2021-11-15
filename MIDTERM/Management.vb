@@ -123,7 +123,7 @@
     Private Sub Btnsearch_Click(sender As Object, e As EventArgs) Handles btnsearch.Click
         Try
             ListView1.Items.Clear()
-            strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE @field1 '%'"
+            strsql = "SELECT tbl_pcperipherals WHERE ProductName LIKE concat(@field1, '%')"
             objcmd = New MySql.Data.MySqlClient.MySqlCommand(strsql, objconn)
             With objcmd
                 .Parameters.AddWithValue("@field1", txtsearch.Text)
@@ -163,5 +163,14 @@
             txtsupplier.Text = .SubItems(8).Text
             txtcontact.Text = .SubItems(9).Text
         End With
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        End
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        LoginForm.Show()
+        Me.Close()
     End Sub
 End Class

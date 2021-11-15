@@ -52,12 +52,23 @@
             usr = objdr("Username")
             pass = objdr("Password") 'Validating Username and password in database'
             MsgBox("You have successfully Login!")
+            txtusername1.Clear()
+            txtpassword1.Clear()
             objcmd.Dispose()
             objdr.Close()
             Me.Hide()
             Management.ShowDialog()
+        ElseIf txtusername1.Text = "test" And txtpassword1.Text <> "test" Then
+            MsgBox("Wrong password")
+            txtpassword1.Clear()
+
+        ElseIf txtusername1.Text <> "test" And txtpassword1.Text = "test" Then
+            MsgBox("Wrong username")
+            txtusername1.Clear
         Else
-            MsgBox("Invalid Username or Password!")
+            MsgBox("Wrong username and password")
+            txtusername1.Clear()
+            txtpassword1.Clear()
         End If
         objconn.Close() 'FIX for Your Connection is already open'
         objcmd.Dispose()
