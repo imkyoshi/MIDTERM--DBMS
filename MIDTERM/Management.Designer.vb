@@ -24,10 +24,10 @@ Partial Class Management
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.btnprint = New System.Windows.Forms.Button()
+        Me.btnload = New System.Windows.Forms.Button()
         Me.btnclear = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.ListView1 = New System.Windows.Forms.ListView()
@@ -68,11 +68,12 @@ Partial Class Management
         Me.lbproductid = New System.Windows.Forms.Label()
         Me.txtpdtid = New System.Windows.Forms.TextBox()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
-        Me.btnload = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -85,28 +86,8 @@ Partial Class Management
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1334, 48)
+        Me.Panel1.Size = New System.Drawing.Size(1261, 48)
         Me.Panel1.TabIndex = 1
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.Image = Global.MIDTERM.My.Resources.Resources.cross
-        Me.PictureBox2.Location = New System.Drawing.Point(1289, 13)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(23, 23)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox2.TabIndex = 10
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.MIDTERM.My.Resources.Resources.minimize
-        Me.PictureBox1.Location = New System.Drawing.Point(1260, 13)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(23, 23)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 9
-        Me.PictureBox1.TabStop = False
         '
         'Label1
         '
@@ -122,6 +103,7 @@ Partial Class Management
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(42, Byte), Integer), CType(CType(57, Byte), Integer), CType(CType(80, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.btnprint)
         Me.Panel2.Controls.Add(Me.btnload)
         Me.Panel2.Controls.Add(Me.btnclear)
         Me.Panel2.Controls.Add(Me.Button1)
@@ -156,15 +138,39 @@ Partial Class Management
         Me.Panel2.Location = New System.Drawing.Point(0, 48)
         Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(1334, 589)
+        Me.Panel2.Size = New System.Drawing.Size(1261, 589)
         Me.Panel2.TabIndex = 2
+        '
+        'btnprint
+        '
+        Me.btnprint.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
+        Me.btnprint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnprint.ForeColor = System.Drawing.Color.White
+        Me.btnprint.Location = New System.Drawing.Point(953, 514)
+        Me.btnprint.Name = "btnprint"
+        Me.btnprint.Size = New System.Drawing.Size(121, 48)
+        Me.btnprint.TabIndex = 40
+        Me.btnprint.Text = "Print"
+        Me.btnprint.UseVisualStyleBackColor = False
+        '
+        'btnload
+        '
+        Me.btnload.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
+        Me.btnload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnload.ForeColor = System.Drawing.Color.White
+        Me.btnload.Location = New System.Drawing.Point(894, 24)
+        Me.btnload.Name = "btnload"
+        Me.btnload.Size = New System.Drawing.Size(83, 28)
+        Me.btnload.TabIndex = 39
+        Me.btnload.Text = "Reload Data"
+        Me.btnload.UseVisualStyleBackColor = False
         '
         'btnclear
         '
         Me.btnclear.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnclear.ForeColor = System.Drawing.Color.White
-        Me.btnclear.Location = New System.Drawing.Point(848, 514)
+        Me.btnclear.Location = New System.Drawing.Point(799, 514)
         Me.btnclear.Name = "btnclear"
         Me.btnclear.Size = New System.Drawing.Size(121, 48)
         Me.btnclear.TabIndex = 38
@@ -176,7 +182,7 @@ Partial Class Management
         Me.Button1.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(1191, 514)
+        Me.Button1.Location = New System.Drawing.Point(1103, 514)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(121, 48)
         Me.Button1.TabIndex = 37
@@ -191,9 +197,9 @@ Partial Class Management
         Me.ListView1.ForeColor = System.Drawing.Color.Lime
         Me.ListView1.FullRowSelect = True
         Me.ListView1.HideSelection = False
-        Me.ListView1.Location = New System.Drawing.Point(386, 68)
+        Me.ListView1.Location = New System.Drawing.Point(382, 71)
         Me.ListView1.Name = "ListView1"
-        Me.ListView1.Size = New System.Drawing.Size(926, 413)
+        Me.ListView1.Size = New System.Drawing.Size(842, 413)
         Me.ListView1.TabIndex = 36
         Me.ListView1.UseCompatibleStateImageBehavior = False
         Me.ListView1.View = System.Windows.Forms.View.Details
@@ -201,43 +207,43 @@ Partial Class Management
         'ColumnHeader1
         '
         Me.ColumnHeader1.Text = "ProductID"
-        Me.ColumnHeader1.Width = 80
+        Me.ColumnHeader1.Width = 81
         '
         'ColumnHeader2
         '
         Me.ColumnHeader2.Text = "ProductName"
         Me.ColumnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader2.Width = 90
+        Me.ColumnHeader2.Width = 105
         '
         'ColumnHeader3
         '
         Me.ColumnHeader3.Text = "ProductBrand"
         Me.ColumnHeader3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader3.Width = 90
+        Me.ColumnHeader3.Width = 110
         '
         'ColumnHeader4
         '
         Me.ColumnHeader4.Text = "ProductCategory"
         Me.ColumnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader4.Width = 105
+        Me.ColumnHeader4.Width = 130
         '
         'ColumnHeader5
         '
         Me.ColumnHeader5.Text = "ProductQuantity"
         Me.ColumnHeader5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader5.Width = 100
+        Me.ColumnHeader5.Width = 126
         '
         'ColumnHeader6
         '
         Me.ColumnHeader6.Text = "ProductDescription"
         Me.ColumnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader6.Width = 118
+        Me.ColumnHeader6.Width = 147
         '
         'ColumnHeader7
         '
         Me.ColumnHeader7.Text = "ProductManufacturer"
         Me.ColumnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader7.Width = 129
+        Me.ColumnHeader7.Width = 161
         '
         'ColumnHeader8
         '
@@ -248,12 +254,13 @@ Partial Class Management
         '
         Me.ColumnHeader9.Text = "Supplier"
         Me.ColumnHeader9.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.ColumnHeader9.Width = 70
         '
         'ColumnHeader10
         '
         Me.ColumnHeader10.Text = "DateShipped"
         Me.ColumnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        Me.ColumnHeader10.Width = 90
+        Me.ColumnHeader10.Width = 100
         '
         'lbsearch
         '
@@ -303,7 +310,7 @@ Partial Class Management
         Me.btndelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btndelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btndelete.ForeColor = System.Drawing.Color.White
-        Me.btndelete.Location = New System.Drawing.Point(696, 514)
+        Me.btndelete.Location = New System.Drawing.Point(647, 514)
         Me.btndelete.Name = "btndelete"
         Me.btndelete.Size = New System.Drawing.Size(121, 48)
         Me.btndelete.TabIndex = 31
@@ -315,7 +322,7 @@ Partial Class Management
         Me.btnsave.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnsave.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnsave.ForeColor = System.Drawing.Color.White
-        Me.btnsave.Location = New System.Drawing.Point(386, 514)
+        Me.btnsave.Location = New System.Drawing.Point(337, 514)
         Me.btnsave.Name = "btnsave"
         Me.btnsave.Size = New System.Drawing.Size(121, 48)
         Me.btnsave.TabIndex = 29
@@ -327,7 +334,7 @@ Partial Class Management
         Me.btnupdate.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
         Me.btnupdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnupdate.ForeColor = System.Drawing.Color.White
-        Me.btnupdate.Location = New System.Drawing.Point(544, 514)
+        Me.btnupdate.Location = New System.Drawing.Point(495, 514)
         Me.btnupdate.Name = "btnupdate"
         Me.btnupdate.Size = New System.Drawing.Size(121, 48)
         Me.btnupdate.TabIndex = 28
@@ -538,23 +545,31 @@ Partial Class Management
         '
         Me.Timer1.Interval = 80
         '
-        'btnload
+        'PictureBox2
         '
-        Me.btnload.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(109, Byte), Integer), CType(CType(134, Byte), Integer))
-        Me.btnload.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnload.ForeColor = System.Drawing.Color.White
-        Me.btnload.Location = New System.Drawing.Point(894, 24)
-        Me.btnload.Name = "btnload"
-        Me.btnload.Size = New System.Drawing.Size(83, 28)
-        Me.btnload.TabIndex = 39
-        Me.btnload.Text = "Load Data"
-        Me.btnload.UseVisualStyleBackColor = False
+        Me.PictureBox2.Image = Global.MIDTERM.My.Resources.Resources.cross
+        Me.PictureBox2.Location = New System.Drawing.Point(1230, 12)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(23, 23)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox2.TabIndex = 10
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.MIDTERM.My.Resources.Resources.minimize
+        Me.PictureBox1.Location = New System.Drawing.Point(1201, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(23, 23)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
         '
         'Management
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1334, 637)
+        Me.ClientSize = New System.Drawing.Size(1261, 637)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.Panel1)
         Me.Font = New System.Drawing.Font("Arial Narrow", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -567,10 +582,10 @@ Partial Class Management
         Me.Text = "Management"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -621,4 +636,5 @@ Partial Class Management
     Friend WithEvents Button1 As Button
     Friend WithEvents btnclear As Button
     Friend WithEvents btnload As Button
+    Friend WithEvents btnprint As Button
 End Class

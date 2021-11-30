@@ -1,10 +1,13 @@
-﻿Public Class Management
+﻿Imports Microsoft.Reporting.WebForms
+Imports Microsoft.Reporting.WinForms
+Public Class Management
     Dim drag As Boolean
     Dim mousex As Integer
     Dim mousey As Integer
     Private Sub Management_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Me.fillsview()
         Timer1.Start()
+        Me.ListView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent)
     End Sub
 
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
@@ -225,5 +228,9 @@
             MsgBox(ex.Message)
             Me.fillsview()
         End Try
+    End Sub
+
+    Private Sub btnprint_Click(sender As Object, e As EventArgs) Handles btnprint.Click
+        PrintPreview.ShowDialog()
     End Sub
 End Class
